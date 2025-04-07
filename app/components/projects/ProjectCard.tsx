@@ -27,10 +27,10 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
   return (
-    <Card className="bg-white/50 backdrop-blur border-slate-200 hover:border-purple-500/50 transition-colors shadow-lg">
+    <Card className="bg-white/50 backdrop-blur border-slate-200 hover:border-purple-500/50 transition-colors shadow-lg w-[500px]">
       <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg" />
       <CardHeader>
-        <div className="flex items-center gap-2 mb-2">
+        <div className="flex items-center gap-2 mb-2 flex-wrap">
           {project.featured && <Badge>Featured</Badge>}
           {project.badges.map((badge) => (
             <Badge key={badge} variant="outline">
@@ -49,7 +49,14 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
           <Button variant="outline" size="sm" onClick={onViewDetails}>
             자세히 보기
           </Button>
-          {project.githubUrl && (
+          {project.featured && project.demoUrl && (
+            <Button variant="ghost" size="sm" className="text-blue-500 hover:text-blue-700 transition-colors" asChild>
+              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                Demo
+              </a>
+            </Button>
+          )}
+          {!project.featured && project.githubUrl && (
             <Button variant="ghost" size="sm" asChild>
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 <svg

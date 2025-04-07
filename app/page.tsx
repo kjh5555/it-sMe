@@ -24,7 +24,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-75" />
             <Avatar className="w-32 h-32 border-4 border-white relative">
-              <AvatarImage src="/avatar.jpg" alt="Profile" />
+              <AvatarImage src="/me.png" alt="Profile" />
               <AvatarFallback>JH</AvatarFallback>
             </Avatar>
             <Badge className="absolute -bottom-2 -right-2 px-4 py-1 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-colors border-none text-white shadow-lg">
@@ -36,7 +36,7 @@ export default function Home() {
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl">
             AI 기술과 웹 개발을 결합하여 혁신적인 솔루션을 만드는 개발자입니다.
-            최신 기술 트렌드를 따라가며 지속적으로 성장하고 있습니다.
+            주어진 업무 뿐 아니라 최신 기술 트렌드를 따라가며 지속적으로 성장하고 있습니다.
           </p>
           <div className="flex gap-4">
             <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-colors border-none text-white shadow-lg" onClick={scrollToProjects}>
@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* Resume Section */}
-      <section className="container mx-auto px-4 py-32 relative">
+      <section className="container mx-auto px-4 py-28 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-yellow-500/5 rounded-3xl" />
         <h2 className="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-yellow-600">
           이력
@@ -59,15 +59,21 @@ export default function Home() {
           <div className="bg-white/50 backdrop-blur border-slate-200 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-slate-800">경력</h3>
             <ul className="list-disc list-inside text-slate-600">
-              <li>2020-현재: AI 솔루션 개발자, ABC 회사</li>
-              <li>2018-2020: 웹 개발자, XYZ 회사</li>
+              <li>2024-현재: AI & Web Developer, 프리랜서(하나은행 소속)</li>
+              <li>2021-2024: AI 솔루션 개발자, 파인트리 시스템</li>
             </ul>
           </div>
           <div className="bg-white/50 backdrop-blur border-slate-200 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-slate-800">학력</h3>
             <ul className="list-disc list-inside text-slate-600">
-              <li>2016-2018: 컴퓨터 공학 석사, DEF 대학교</li>
-              <li>2012-2016: 컴퓨터 공학 학사, GHI 대학교</li>
+              <li>2013-2020: 선박해양 공학 학사, 조선대학교</li>
+            </ul>
+          </div>
+          <div className="bg-white/50 backdrop-blur border-slate-200 p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold text-slate-800">교육이력</h3>
+            <ul className="list-disc list-inside text-slate-600">
+              <li>2020.03-2020.07: 스마트그리드기반 IOT융합 SW전문가 과정, 스마트미디어인재개발원</li>
+              <li>2020.10-2020.12: AI 과정, 멋쟁이사자처럼</li>
             </ul>
           </div>
         </div>
@@ -102,17 +108,29 @@ export default function Home() {
                   <div>
                     <h3 className="font-semibold mb-2 text-slate-700">Core Technologies</h3>
                     <ul className="space-y-2 text-slate-600">
+                    <li className="flex items-center gap-2">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        Vue.js & Vite.js
+                      </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         React & Next.js
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        JavaScript
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">beginner</Badge>
                         TypeScript
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         Tailwind CSS
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        SASS
                       </li>
                     </ul>
                   </div>
@@ -120,16 +138,16 @@ export default function Home() {
                     <h3 className="font-semibold mb-2 text-slate-700">Additional Skills</h3>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-pink-500/50 text-pink-600 bg-pink-50">Intermediate</Badge>
-                        Framer Motion
+                      <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                          AG-Grid
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
-                        Redux/Zustand
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                          pinia
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-pink-500/50 text-pink-600 bg-pink-50">Intermediate</Badge>
-                        Testing (Jest/RTL)
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                          JQUERY
                       </li>
                     </ul>
                   </div>
@@ -149,7 +167,7 @@ export default function Home() {
                     <h3 className="font-semibold mb-2 text-slate-700">Frameworks & Libraries</h3>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         TensorFlow/Keras
                       </li>
                       <li className="flex items-center gap-2">
@@ -157,8 +175,20 @@ export default function Home() {
                         PyTorch
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
-                        Scikit-learn
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        LangChain
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Beginner</Badge>
+                        LangSmith
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        YOLO
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        OpenCV
                       </li>
                     </ul>
                   </div>
@@ -166,16 +196,12 @@ export default function Home() {
                     <h3 className="font-semibold mb-2 text-slate-700">AI Services</h3>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         OpenAI API
                       </li>
                       <li className="flex items-center gap-2">
                         <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         Hugging Face
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
-                        Azure AI
                       </li>
                     </ul>
                   </div>
@@ -195,16 +221,12 @@ export default function Home() {
                     <h3 className="font-semibold mb-2 text-slate-700">Core Technologies</h3>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         Node.js/Express
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
-                        Python/FastAPI
-                      </li>
-                      <li className="flex items-center gap-2">
                         <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
-                        GraphQL
+                        Python/FastAPI
                       </li>
                     </ul>
                   </div>
@@ -212,15 +234,15 @@ export default function Home() {
                     <h3 className="font-semibold mb-2 text-slate-700">Databases & Cloud</h3>
                     <ul className="space-y-2 text-slate-600">
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Advanced</Badge>
-                        PostgreSQL
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        MySQL
                       </li>
                       <li className="flex items-center gap-2">
                         <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
                         MongoDB
                       </li>
                       <li className="flex items-center gap-2">
-                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Intermediate</Badge>
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-600 bg-purple-50">Beginner</Badge>
                         AWS/Vercel
                       </li>
                     </ul>
