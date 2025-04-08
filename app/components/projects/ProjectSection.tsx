@@ -55,7 +55,7 @@ const PROJECTS = [
   {
     title: "PARAMOS(RAG) 프로젝트 개발",
     description: "RAG 기반의 기업형 챗봇 서비스 개발",
-    longDescription: "RAG를 활용한 문서기반 답변을 제공하는 기업형 챗봇 서비스 개발 collection이라는 문서를 Embbeding한 데이터를 Category라는 프롬프트와 LLM을 선택하여 맵핑하여 채팅화면에서 Collection과 맵핑된 Category를 선택하여 답변을 제공하는 기업형 챗봇 서비스 입니다.",
+    longDescription: "RAG를 활용한 문서기반 답변을 제공하는 기업형 챗봇 서비스 개발 collection이라는 문서를 Embbeding한 데이터를 담은 Store를 Category라는 프롬프트와 LLM을 선택하여 맵핑하여 채팅화면에서 Collection과 맵핑된 Category를 선택하여 답변을 제공하는 기업형 챗봇 서비스 입니다.",
     badges: ["AI", "HuggingFace", "Python","FastAPI","MySQL","vue.js","LLM","RAG"],
     featured: true,
     // githubUrl: "https://github.com/yourusername/ai-image-generator",
@@ -78,67 +78,45 @@ const PROJECTS = [
     imageUrl: "/ragImg.jpeg"
   },
   {
-    title: "포트폴리오 웹사이트",
-    description: "Next.js와 Tailwind CSS로 구현한 반응형 포트폴리오",
-    longDescription: "모던한 UI/UX를 적용한 개인 포트폴리오 웹사이트입니다. 다크 모드와 반응형 디자인을 지원하며, 프로젝트 갤러리와 기술 스택을 효과적으로 보여줍니다.",
-    badges: ["Next.js", "TypeScript"],
+    title: "MCP 번역 사이트",
+    description: "Smithery MCP Store가 전부 영어로 되어있어 한글 버전으로 바꾼 사이트",
+    longDescription: "스미더리 MCP Store가 전부 영어로 되어있어 영어를 못하는 사람들을 위해 한글 버전으로 바꾼 사이트 입니다. 스미더리에서 API를 통해 데이터를 가져오고 각 데이터의 설명을 LLM을 통해 번역하여 화면에 다시 그려주는 사이트 입니다.",
+    badges: ["Next.js", "TypeScript","openAI","LLM","GPT","Python","FastAPI"],
     featured: false,
-    githubUrl: "https://github.com/yourusername/portfolio",
-    demoUrl: "https://your-portfolio.com",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    timeline: "2024.01 - 2024.02 (2개월)",
+    githubUrl: "https://github.com/kjh5555/MCP-korean",
+    demoUrl: "https://mcp-korean-cj0pvj3a1-jaehyeonkims-projects.vercel.app/",
+    techStack: ["Next.js", "TypeScript","openAI","LLM","GPT","Python","FastAPI"],
+    timeline: "2024.04 - 2024.04 (1개월)",
     role: "개인 프로젝트 (디자인 및 개발)",
     challenges: [
-      "페이지 로딩 성능 최적화가 필요했습니다. Next.js의 Image 컴포넌트와 동적 임포트를 활용하여 초기 로딩 시간을 50% 단축했습니다.",
-      "다양한 애니메이션 효과를 구현하면서 성능 저하가 발생했습니다. Framer Motion의 LazyMotion을 도입하여 애니메이션 번들 크기를 최적화했습니다."
+      "LLM의 응답을 배치성을 통해 한번에 호출하고 무한 스크롤로 분배.",
+      "중복된 번역을 최소화 하기위해 cache로 중복 번역을 최소화 시켰습니다."
     ],
     achievements: [
-      "Lighthouse 성능 점수 95점 이상 달성",
-      "GitHub 프로필 README에서 높은 호응",
-      "여러 개발자 커뮤니티에서 디자인 레퍼런스로 공유됨"
+      "한글 번역을 통해 UI가 나아짐",
     ],
-    images: [
-      {
-        url: "/projects/portfolio/main.png",
-        caption: "메인 페이지 - 다크 모드 지원"
-      },
-      {
-        url: "/projects/portfolio/projects.png",
-        caption: "프로젝트 갤러리 섹션"
-      }
-    ],
-    imageUrl: "/images/portfolio-website.jpg"
+    imageUrl: "/mcp.png"
   },
   {
-    title: "AI 챗봇 API",
-    description: "GPT 기반의 커스텀 챗봇 백엔드 API",
-    longDescription: "FastAPI로 구현한 고성능 챗봇 API 서버입니다. 맞춤형 프롬프트와 컨텍스트 관리를 지원하며, 다양한 도메인에 적용 가능한 유연한 구조를 가지고 있습니다.",
-    badges: ["Python", "FastAPI"],
+    title: "webRTC를 활용한 화상 채팅방",
+    description: "webRTC를 활용한 채팅 서비스 구현",
+    longDescription: "채팅방목록 채팅방생성, 화상채팅, 사용자끼리 파일공유 등 기능을 구현한 채팅 서비스 입니다.",
+    badges: ["Vue.js 3 ", "Socket.IO Client","PeerJS","Node.js","Express"],
     featured: false,
-    githubUrl: "https://github.com/yourusername/chatbot-api",
-    techStack: ["Python", "FastAPI", "OpenAI", "PostgreSQL", "Docker"],
-    timeline: "2023.06 - 2023.08 (3개월)",
-    role: "백엔드 개발 & DevOps 담당",
+    githubUrl: "https://github.com/kjh5555/vibe",
+    techStack: ["Vue.js 3 ", "Socket.IO Client","PeerJS","Node.js","Express"],
+    timeline: "2024.04 - 2024.04 (1개월)",
+    role: "개인 프로젝트 (VIBE코딩)",
     challenges: [
-      "대화 컨텍스트 관리에서 메모리 사용량이 증가하는 문제가 있었습니다. Redis를 도입하여 컨텍스트 캐싱 시스템을 구현했습니다.",
-      "다중 사용자 환경에서 API 응답 시간이 느려지는 문제가 있었습니다. 비동기 처리와 커넥션 풀링을 최적화하여 처리량을 3배 향상시켰습니다."
+      "MCP와 VibeCoading으로 화상채팅 서비스 구현.",
+      "기존 화상채팅 서비스의 기능 Clone코딩."
     ],
     achievements: [
-      "초당 100개 이상의 동시 요청 처리 달성",
-      "평균 응답 시간 300ms 이하 유지",
-      "여러 기업에서 도입하여 실제 서비스에 활용 중"
+      "사용자 인증",
+      "채팅방 관리",
+      "실시간 채팅"
     ],
-    images: [
-      {
-        url: "/projects/chatbot-api/architecture.png",
-        caption: "시스템 아키텍처 다이어그램"
-      },
-      {
-        url: "/projects/chatbot-api/monitoring.png",
-        caption: "실시간 성능 모니터링 대시보드"
-      }
-    ],
-    imageUrl: "/images/ai-chatbot-api.jpg"
+    imageUrl: "/webchat.png"
   },
 ]
 
