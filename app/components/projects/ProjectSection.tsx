@@ -118,6 +118,29 @@ const PROJECTS = [
     ],
     imageUrl: "/webchat.png"
   },
+  {
+    title: "SmartParm 관리자 사이트",
+    description: "농장 내 온습도 및 카메라를 확인 및 제어할 수 있는 스마트팜 관리자 사이트.",
+    longDescription: "각각의 농장에 대해 관리자가 센서를 통해 온도, 습도, CO2, 조명, pH를 조절할 수 있는 사이트입니다.",
+    badges: ["Vue.js 3 ", "Vite","JavaScript","TypeScript","Pinia","Vuetify","Tailwind CSS","Vuex"],
+    featured: false,
+    githubUrl: "https://github.com/kjh5555/smartParmDashboard",
+    techStack: ["Vue.js 3 ", "Vite","JavaScript","TypeScript","Pinia","Vuetify","Tailwind CSS","Vuex"],
+    timeline: "2024.04 - 2024.04 (1개월)",
+    role: "개인 프로젝트 (VIBE코딩)",
+    challenges: [
+      "온도, 습도, CO2, 조명, EC, pH, 관수 및 환기 설정을 포함한 다양한 환경 제어 기능을 제공합니다..",
+      "각 재배층에 대한 개별 설정 및 제어 기능을 지원합니다. (예: 조명, 관수 토글)",
+      "각 농장의 실시간 모니터링을 위한 영상 스트리밍 기능을 제공합니다.",
+      "카카오로그인과 구글로그인 기능을 제공합니다."
+    ],
+    achievements: [
+      "대시보드를 통해 정보를 확인할 수 있습니다.",
+      "각 농장마다 각각 데이터를 설정 지정가능",
+      "다양한 로그인으로 접근성을 높임"
+    ],
+    imageUrl: "/smart.png"
+  },
 ]
 
 const MAIN_PROJECTS = PROJECTS.filter(project => project.featured);

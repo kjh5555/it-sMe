@@ -59,7 +59,7 @@ export default function Home() {
           <div className="bg-white/50 backdrop-blur border-slate-200 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold text-slate-800">경력</h3>
             <ul className="list-disc list-inside text-slate-600">
-              <li>2024-현재: AI & Web Developer, 프리랜서(하나은행 소속)</li>
+              <li>2024-현재: AI & Web Developer, 프리랜서(하나은행 개인,기업 챗봇 업무)</li>
               <li>2021-2024: AI 솔루션 개발자, 파인트리 시스템</li>
             </ul>
           </div>
