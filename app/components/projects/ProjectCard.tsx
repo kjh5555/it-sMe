@@ -27,8 +27,8 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
   return (
-    <Card className="bg-white/50 backdrop-blur border-slate-200 hover:border-purple-500/50 transition-colors shadow-lg w-[500px]">
-      <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg" />
+    <Card className="bg-white/50 dark:bg-slate-800/50 backdrop-blur border-slate-200 dark:border-slate-700 hover:border-purple-500/50 dark:hover:border-purple-400/50 transition-colors shadow-lg w-[500px] relative z-0">
+      <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg relative z-0" />
       <CardHeader>
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           {project.featured && <Badge>Featured</Badge>}
@@ -38,8 +38,8 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
             </Badge>
           ))}
         </div>
-        <CardTitle className="text-slate-800">{project.title}</CardTitle>
-        <CardDescription className="text-slate-600">{project.description}</CardDescription>
+        <CardTitle className="text-slate-800 dark:text-slate-200">{project.title}</CardTitle>
+        <CardDescription className="text-slate-600 dark:text-slate-400">{project.description}</CardDescription>
       </CardHeader>
       <CardContent>
         <p className="text-sm text-muted-foreground mb-4">
