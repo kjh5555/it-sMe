@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -130,12 +131,17 @@ export function ProjectDialog({ project, open, onOpenChange }: ProjectDialogProp
                 <div className="grid grid-cols-2 gap-4">
                   {project.images.map((image, index) => (
                     <div key={index} className="relative group">
-                      <img
-                        src={image.url}
-                        alt={image.caption}
-                        className="rounded-lg w-full h-auto"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm">
+                      <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                        <Image
+                          src={image.url}
+                          alt={image.caption}
+                          fill
+                          className="object-cover rounded-lg"
+                          sizes="(max-width: 768px) 50vw, 400px"
+                          unoptimized
+                        />
+                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm rounded-b-lg">
                         {image.caption}
                       </div>
                     </div>

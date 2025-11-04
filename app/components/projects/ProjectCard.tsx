@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -28,7 +29,16 @@ interface ProjectCardProps {
 export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
   return (
     <Card className="bg-white/50 dark:bg-slate-800/50 backdrop-blur border-slate-200 dark:border-slate-700 hover:border-purple-500/50 dark:hover:border-purple-400/50 transition-colors shadow-lg w-[500px] relative z-0">
-      <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-t-lg relative z-0" />
+      <div className="relative w-full h-48 rounded-t-lg overflow-hidden">
+        <Image 
+          src={project.imageUrl} 
+          alt={project.title} 
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 500px"
+          unoptimized
+        />
+      </div>
       <CardHeader>
         <div className="flex items-center gap-2 mb-2 flex-wrap">
           {project.featured && <Badge>Featured</Badge>}
