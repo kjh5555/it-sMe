@@ -3,7 +3,7 @@
 import { forwardRef } from "react";
 import { Reveal } from "../scroll/Reveal";
 import { MagneticButton } from "../scroll/MagneticButton";
-import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Github, ArrowUpRight } from "lucide-react";
 
 const LINKS = [
   {
@@ -24,15 +24,6 @@ const LINKS = [
     accent: "hsl(var(--accent-iris))",
     asAnchor: true,
     external: true,
-  },
-  {
-    label: "LinkedIn",
-    sub: "프로필 확인하기",
-    href: "#",
-    icon: Linkedin,
-    accent: "hsl(var(--accent-coral))",
-    asAnchor: false,
-    external: false,
   },
 ] as const;
 
@@ -69,7 +60,7 @@ export const ContactSection = forwardRef<HTMLElement>(function ContactSection(_,
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-4 md:grid-cols-2">
           {LINKS.map((link) => {
             const Icon = link.icon;
             const isPrimary = "primary" in link && link.primary;
