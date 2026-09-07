@@ -121,54 +121,6 @@ const PROJECTS: Project[] = [
     imageUrl: "/trading.png",
   },
   {
-    title: "열린의회 — 후보·의원 정보 서비스",
-    description:
-      "공공데이터 기반으로 국회의원·광역/기초의원과 2026 지방선거 후보자, 예산 정보를 한눈에 보여주는 시민 정보 플랫폼",
-    longDescription:
-      "‘열린의회’는 국회·지방의회 의원 정보, 발의 법안, 표결 이력, 그리고 2026년 지방선거 후보자의 학력·재산·공약을 지역구 기반으로 검색할 수 있도록 한 공공데이터 시민 정보 서비스입니다. Next.js 15 App Router + Tailwind v4 기반 웹 프론트엔드와 Fastify v5 + Prisma v6 + PostgreSQL 백엔드를 pnpm workspaces / Turborepo 모노레포로 구성했고, 프론트는 Vercel·API는 Railway에 분리 배포했습니다. 국회 Open API, 카카오 로컬 API, CLIK(중앙선관위) 등 다중 공공 API를 통합해 일일 자동 동기화 크론(KST 03:00)을 운영하며, 후보자/공시 정보를 지속적으로 최신 상태로 유지합니다.",
-    badges: [
-      "Next.js 15",
-      "Fastify",
-      "Prisma",
-      "PostgreSQL",
-      "Turborepo",
-      "TypeScript",
-      "공공데이터",
-    ],
-    featured: true,
-    githubUrl: "https://github.com/kjh5555/candidate",
-    demoUrl: "https://candidate-web-bice.vercel.app",
-    techStack: [
-      "Next.js 15 (App Router)",
-      "React 19",
-      "TypeScript",
-      "Tailwind CSS 4",
-      "Fastify 5",
-      "Prisma 6",
-      "PostgreSQL",
-      "pnpm Workspaces",
-      "Turborepo",
-      "Vercel",
-      "Railway",
-      "Cron",
-    ],
-    timeline: "2026 - 현재",
-    role:
-      "프로젝트 기획 및 풀스택 개발 — Next.js 프론트엔드, Fastify/Prisma API 서버, PostgreSQL 스키마 설계, 다중 공공 API 통합 파이프라인, 일일 동기화 크론 및 Vercel·Railway 배포 운영",
-    challenges: [
-      "국회 Open API, 카카오 로컬 API, CLIK(중앙선관위) 등 응답 스펙이 제각각인 다중 공공 API를 단일 도메인 모델로 정규화하면서, 지역구·선거구·행정구역 매핑의 불일치를 해소하는 데이터 파이프라인을 설계해야 했습니다.",
-      "프론트(Vercel)와 API(Railway)를 분리 배포하는 구조에서 CORS·환경변수·API URL 주입을 안전하게 처리하고, pnpm workspaces 기반 공통 타입 패키지를 양쪽에 일관되게 빌드/배포되도록 Turborepo 워크플로를 구성했습니다.",
-      "후보자·공시 데이터가 수시로 갱신되는 특성을 반영해 KST 03:00 일일 동기화 크론을 운영하고, 부분 실패 시에도 멱등하게 재시도 가능한 업서트 전략을 Prisma 기반으로 구현했습니다.",
-    ],
-    achievements: [
-      "국회의원·광역/기초의원 정보, 발의 법안, 표결 이력, 2026 지방선거 후보자 프로필을 지역구 기반으로 통합 검색할 수 있는 시민 정보 플랫폼을 구축했습니다.",
-      "pnpm workspaces + Turborepo 모노레포로 프론트/백엔드/공통 타입을 단일 저장소에서 관리하면서, Vercel·Railway에 각각 자동 배포되는 파이프라인을 운영하고 있습니다.",
-      "공공 API 다중 통합과 일일 자동 동기화 크론으로, 별도 수기 작업 없이 후보자/공시 데이터가 매일 최신화되는 무중단 운영 환경을 달성했습니다.",
-      "공공데이터 기반의 ‘무료 시민 정보 서비스’ 컨셉을 실서비스 도메인(candidate-web-bice.vercel.app)으로 공개 운영 중입니다.",
-    ],
-    imageUrl: "/candidate.png",
-  },
-  {
     title: "손안에 정치 (Hands on Policy)",
     description:
       "국회의원 재산·병역, 논쟁 중인 정치 이슈, 정부·국회 정책을 진영 편들지 않고 출처와 함께 모아두는 비영리 정치 투명성 플랫폼",
